@@ -5,11 +5,11 @@ output:
     keep_md: true
 ---
 
-#### Personal Activity Report
+## Personal Activity Report
 
 Data used for this report were collected from an anonymous individual during the months of October and November, 2012 using personal activity monitoring device. This device records data at 5 minute intervals through out the day for 61 days. 
 
-#### Load data and initial exploratory data analysis
+### Load data and initial exploratory data analysis
 
 
 ```r
@@ -29,7 +29,7 @@ str(data)
 ##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...
 ```
 
-#### Extimate the mean total number of steps taken per day?
+### Extimate the mean total number of steps taken per day?
 
 1. Make a histogram of the total number of steps taken each day
 2. Calculate the mean and median total number of steps taken per day  
@@ -63,7 +63,7 @@ median(sum$sum.steps)
 ```
 The mean total number of steps taken each day is 10766.19, the median is 10765.
 
-#### Average daily activity pattern
+### Average daily activity pattern
 
 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) 
 and the average number of steps taken, averaged across all days (y-axis)  
@@ -92,7 +92,7 @@ mean[maxsteps, ]
 
 The 835th 5-min interval,on average across all the days in the dataset, contains the max number of steps.
 
-#### Imputing missing values
+### Imputing missing values
 
 Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
 
@@ -168,7 +168,7 @@ Mean values are the same; median value slightly increases compared with the esti
 
 Filling in the NAs with the corresponding interval means results in increasing the frequencies of steps values per day at about 10000 and moving median to the mean.    
 
-#### Activity patterns between weekdays and weekends
+### Activity patterns between weekdays and weekends
 
 Use the dataset with the filled-in missing values:
 
